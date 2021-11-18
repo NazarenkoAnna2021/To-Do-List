@@ -37,6 +37,10 @@ body{
     /* font-family: "Klaxons"; */
 }
 
+::-webkit-scrollbar {
+    width: 0;
+  }
+
 .allBox{
     display: flex;
     margin-top: 30px;
@@ -44,10 +48,6 @@ body{
     text-align: center;
     
 }
-
-/* .add{
-    margin-left: 50px;
-} */
 
 button{
     background: #b1d5fa;
@@ -65,29 +65,18 @@ button:hover{
 .addButton{
     background-color: #9eacc9;
     width: 50px;
-    height:auto;
+    height: 40px;
 }
 
 .delButton{
     background-color: #9eacc9;
     height: 20px;
     width: 20px;
-
-
 }
-
-.arrow{
-    margin-top: 240px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 
 .box{
     background-color: #6e6d7c;
     border-radius: 10px;
-    width: 500px;
-    height: 600px;
     display: block;
     color: #d2dbf7;
     padding-left: 10px;
@@ -105,7 +94,11 @@ button:hover{
 }
 
 .toDo{
-height: 550px;
+height:max-content;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+
 }
 
 li{
@@ -114,10 +107,7 @@ li{
     width: auto;
     background-color: #9eacc9;
     color: #d2dbf7;
-}
-
-li:focus{
-    background-color: #0c0938;
+    word-wrap: break-word;
 }
 
 input{
@@ -127,5 +117,17 @@ input{
     height:50px;
     color: #d2dbf7;  
     font-size: 30px;  
+    word-wrap: break-word;
 }
 
+.check{
+    background-color: #9eacc9;
+    height: 20px;
+    width: 20px;
+}
+
+.innerButt{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+}
