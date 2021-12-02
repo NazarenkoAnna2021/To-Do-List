@@ -3,26 +3,29 @@ import Model from './model'
 import { constants } from "./constants"
 
 export default class Controller {
+    constructor(){
+        this.model = new Model();
+        this.addElem = this.addElem.bind(this);
+        this.deleteElement = this.deleteElement.bind(this);
+        this.checkTask = this.checkTask.bind(this); 
+    }
     addElem() {
-        const model = new Model();
-        const newid = model.generateId(model.createId);
-        model.setData(dom.newLi.value, newid);
-        const newTaskEl = model.writeTask(dom.newLi.value, newid, '');
+        const newid = this.model.generateId(this.model.createId);
+        this.model.setData(dom.newLi.value, newid);
+        const newTaskEl = this.model.writeTask(dom.newLi.value, newid, '');
         dom.toDo.appendChild(newTaskEl);
     }
     deleteElement(event) {
         if (event.target && event.target.nodeName == "BUTTON") {
             let idInput = event.target.getAttribute('id');
-            const model = new Model();
-            model.valuesToDo.forEach((value, index) => {
-                model.deleteData(`val${value.id}`, idInput, index, value);
+            this.model.valuesToDo.forEach((value, index) => {
+                this.model.deleteData(`val${value.id}`, idInput, index, value);
             });
             event.target.parentNode.remove();
         }
     }
     checkTask(event) {
         let idInput = event.target.getAttribute('id');
-        const model = new Model();
-        model.reversCheck(idInput);
+        this.model.reversCheck(idInput);
     }
 }
