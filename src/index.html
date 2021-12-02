@@ -22,14 +22,12 @@
         </div>
     </div>
     <script type="text/template" id="taskItemTemplate">
-        <li>
-        <div class="taskEdit">
-           <label for="{{itemid}}">{{title}}</label>
-           <div class="edit">
-              <input id="{{itemid}}"type="checkbox" class="check" {{}}>
-              <button id="{{valid}}" class='delButton'>X</button>
-           </div>
-        </div>
+        <li >
+            <div class="edit">                
+                <input id="{{itemid}}"type="checkbox" class="check" {{}}>
+           <button id="{{valid}}" class='delButton'>X</button>
+            </div>
+        <label for="{{itemid}}">{{title}}</label>
         </li>
     </script>
 </body>

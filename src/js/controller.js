@@ -21,7 +21,7 @@ export default class Controller {
             this.model.valuesToDo.forEach((value, index) => {
                 this.model.deleteData(`val${value.id}`, idInput, index, value);
             });
-            event.target.parentNode.remove();
+            event.target.parentNode.parentNode.remove();
         }
     }
     checkTask(event) {
