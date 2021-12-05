@@ -131,3 +131,13 @@ input{
     justify-content: right;
     text-align: center;
 }
+.taskEdit{
+    display: flex;
+    flex-direction: column;
+}
+.edit{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 0;
+}

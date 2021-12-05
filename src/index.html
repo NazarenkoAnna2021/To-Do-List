@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List</title>
-    <link rel="stylesheet" href="./src/styles/todo.css">
 </head>
+
 <body>
     <div class="head">
         <header>
@@ -21,10 +21,15 @@
             <ul class="listStylereset box toDo"></ul>
         </div>
     </div>
+    <script type="text/template" id="taskItemTemplate">
+        <li >
+            <div class="edit">                
+                <input id="{{itemid}}"type="checkbox" class="check" {{}}>
+           <button id="{{valid}}" class='delButton'>X</button>
+            </div>
+        <label for="{{itemid}}">{{title}}</label>
+        </li>
+    </script>
 </body>
-<script src="./src/dom.js"></script>
-<script src="./src/constants.js"></script>
-<script src="./src/functions.js"></script>
-<script src="./src/todo.js"></script>
 
 </html>
